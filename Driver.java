@@ -23,5 +23,38 @@ public class Driver {
 
         System.out.println(salesPeople[0].calcTotalSales());
 
+        String highestSalesPersonId = highest(salesPeople);
+        System.out.println("Salesperson with highest sales: " + highestSalesPersonId);
+
+        Sales newSale = new Sales("A400", 500.50, 5);
+        System.out.println(addSales(newSale, "100", salesPeople));
+
+    }
+
+    public static String highest(SalesPerson[] salesPeople) {
+        String index = salesPeople[0].getId();
+        double maxSales = salesPeople[0].calcTotalSales();
+        for (int i = 1; i < salesPeople.length; i++) {
+            SalesPerson person = salesPeople[i];
+            if (person == null) {
+                continue;
+            }
+            double sales = person.calcTotalSales();
+            if (sales > maxSales) {
+                maxSales = sales;
+                index = person.getId();
+            }
+        }
+        return index;
+    }
+
+    public static boolean addSales(Sales sale, String id, SalesPerson[] salesPeople) {
+        for (SalesPerson person : salesPeople) {
+            if (person != null && person.getId().equals(id)) {
+                person.setSalesHistory(sale);
+                return true;
+            }
+        }
+        return false;
     }
 }
