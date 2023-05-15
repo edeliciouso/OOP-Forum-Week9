@@ -56,6 +56,15 @@ If a change is needed, there will be no way to do it, because we need to update 
 *In the SalesPerson class*
 
 
+**(f.) By making use of any previously written methods, construct the method highest() that returns the ID of the salesperson whose sales have the largest total value.**
+
+*In the Driver class*
+
+
+**(g.) Construct the method addSales(Sales s, String id), in the Driver class, that will add a new Sales object s, to the salesperson with a specified ID.**
+
+*In the Driver class*
+
 
 **(h.) Suggest changes that must be made to the SalesPerson class and/or the Sales class to allow these calculations to be made.**
 
