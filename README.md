@@ -23,7 +23,7 @@ Using libraries accelerates the development of programs like these because libra
 
 **(a.) Complete the constructor public SalesPerson(String id), from the SalesPerson class.**
 
-*In the SalesPerson Code*
+*In the SalesPerson Class*
 
 
 
